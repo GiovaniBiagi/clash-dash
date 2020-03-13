@@ -1,5 +1,14 @@
+  
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './service/firebase';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>, 
+document.getElementById('root'));
