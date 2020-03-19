@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Views from '../views';
-import Menu from '../components/Menu';
+import MainWrapper from '../components/MainWrapper';
 
-const Main = () => (
+import { fetchPlayerData } from '../functions/coc'
+
+function Main(){
+
+    useEffect(() => {
+        fetchPlayerData('922J28JJ2')
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => error);
+    }, []);
+
+    return (
     <>
-        <Menu>
+        <MainWrapper>
             <Views />
-        </Menu>
+        </MainWrapper>
 
     </>
-)
+    );
+}
 
 export default Main;
