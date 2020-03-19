@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const config = axios.create({
-  baseURL: "https://clash-dash-backend.herokuapp.com",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 
